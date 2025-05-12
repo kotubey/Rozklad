@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Розклад киці 🐾</title>
+    <script src="https://unpkg.com/framer-motion@10.12.16/dist/framer-motion.umd.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        animation: gradientShift 15s ease infinite;
+        background-size: 400% 400%;
+        font-family: 'Quicksand', sans-serif;
+      }
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .bounce-slow {
+        animation: bounce 3s infinite;
+      }
+      .fade-in {
+        animation: fadeIn 2s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      table th, table td {
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      table tr:hover td {
+        background-color: #ffe4e6;
+        transform: scale(1.02);
+      }
+      /* Адаптивність для мобільних пристроїв */
+      @media (max-width: 640px) {
+        table {
+          font-size: 12px; /* Зменшуємо шрифт на маленьких екранах */
+        }
+        table th, table td {
+          padding: 1rem; /* Більші відступи для кращого читання */
+        }
+        h1 {
+          font-size: 3rem; /* Менший розмір заголовка на мобільних */
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem; /* Зменшення відступів */
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-pink-100 via-rose-200 to-purple-200 min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-6xl transform transition-transform duration-500 hover:scale-[1.01] fade-in">
+      <h1 class="text-5xl font-extrabold text-center text-rose-500 mb-6 bounce-slow">Розклад для моєї киці</h1>
+      <div class="overflow-x-auto">
+        <table class="table-auto w-full text-center border-collapse border border-rose-300 text-sm sm:text-base shadow-xl rounded-2xl overflow-hidden">
+           <thead class="bg-gradient-to-r from-rose-800 via-fuchsia-900 to-purple-950 text-black-100 font-semibold">
+            <tr>
+              <th class="border border-rose-200 p-3">Час</th>
+              <th class="border border-rose-200 p-3">Пн</th>
+              <th class="border border-rose-200 p-3">Вт</th>
+              <th class="border border-rose-200 p-3">Ср</th>
+              <th class="border border-rose-200 p-3">Чт</th>
+              <th class="border border-rose-200 p-3">Пт</th>
+              <th class="border border-rose-200 p-3">Сб</th>
+              <th class="border border-rose-200 p-3">Нд</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white text-rose-700">
+            <tr class="hover:bg-rose-100 transition duration-300 ease-in-out">
+              <td class="border p-2">6:00</td><td class="border p-2"></td><td class="border p-2">Підйом</td><td class="border p-2">Підйом</td><td class="border p-2">Підйом</td><td class="border p-2">Підйом</td><td class="border p-2"></td><td class="border p-2"></td>
+            </tr>
+            <tr class="hover:bg-rose-100 transition duration-300 ease-in-out">
+              <td class="border p-2">8:00</td><td class="border p-2"></td><td class="border p-2">Перша пара</td><td class="border p-2">Перша пара</td><td class="border p-2">Перша пара</td><td class="border p-2">Перша пара</td><td class="border p-2"></td><td class="border p-2"></td>
+            </tr>
+            <tr class="hover:bg-rose-100 transition duration-300 ease-in-out">
+              <td class="border p-2">9:00</td><td class="border p-2">Підйом</td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td>
+            </tr>
+            <tr class="hover:bg-rose-100 transition duration-300 ease-in-out">
+              <td class="border p-2">9:45</td><td class="border p-2"></td><td class="border p-2">Друга пара</td><td class="border p-2">Друга пара</td><td class="border p-2">Друга пара</td><td class="border p-2">Друга пара</td><td class="border p-2"></td><td class="border p-2"></td>
+            </tr>
+            <tr class="hover:bg-rose-100 transition duration-300 ease-in-out">
+              <td class="border p-2">11:15</td><td class="border p-2"></td><td class="border p-2">Додому</td><td class="border p-2">Додому</td><td class="border p-2">Додому</td><td class="border p-2">Додому</td><td class="border p-2"></td><td class="border p-2"></td>
+            </tr>
+            <tr class="hover:bg-rose-100 transition duration-300 ease-in-out">
+              <td class="border p-2">11:30</td><td class="border p-2">Третя пара</td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td>
+            </tr>
+            <tr class="hover:bg-rose-100 transition duration-300 ease-in-out">
+              <td class="border p-2">13:15</td><td class="border p-2">Четверта пара</td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td>
+            </tr>
+            <tr class="hover:bg-rose-100 transition duration-300 ease-in-out">
+              <td class="border p-2">14:45</td><td class="border p-2">Додому</td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td>
+            </tr>
+            <tr class="hover:bg-rose-100 transition duration-300 ease-in-out">
+              <td class="border p-2">15:00</td><td class="border p-2"></td><td class="border p-2">П'ята пара</td><td class="border p-2">Зал</td><td class="border p-2">П'ята пара</td><td class="border p-2">Підготовка</td><td class="border p-2"></td><td class="border p-2"></td>
+            </tr>
+            <tr class="hover:bg-rose-100 transition duration-300 ease-in-out">
+              <td class="border p-2">16:30</td><td class="border p-2"></td><td class="border p-2">Додому</td><td class="border p-2"></td><td class="border p-2">Додому</td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td>
+            </tr>
+            <tr class="hover:bg-rose-100 transition duration-300 ease-in-out">
+              <td class="border p-2">18:00</td><td class="border p-2">Зал</td><td class="border p-2">Підготовка</td><td class="border p-2">Підготовка</td><td class="border p-2">Підготовка</td><td class="border p-2"></td><td class="border p-2">Зал</td><td class="border p-2"></td>
+            </tr>
+            <tr class="hover:bg-rose-100 transition duration-300 ease-in-out">
+              <td class="border p-2">20:30</td><td class="border p-2">Підготовка</td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td><td class="border p-2"></td>
+            </tr>
+            <tr class="hover:bg-rose-100 transition duration-300 ease-in-out">
+              <td class="border p-2">22:00</td>
+              <td class="border p-2">Спати</td>
+              <td class="border p-2">Спати</td>
+              <td class="border p-2">Спати</td>
+              <td class="border p-2">Спати</td>
+              <td class="border p-2">Спати</td>
+              <td class="border p-2">Спати</td>
+              <td class="border p-2">Спати</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
